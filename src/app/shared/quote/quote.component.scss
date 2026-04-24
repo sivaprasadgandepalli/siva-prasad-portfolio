@@ -1,0 +1,49 @@
+.quote {
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+    width: fit-content;
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    padding: 0.3rem 0.9rem;
+    border-radius: var(--radius-pill);
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+
+    &.normal {
+        font-weight: 400;
+    }
+
+    &.bold {
+        font-weight: 600;
+    }
+
+    &.bolder {
+        font-weight: 700;
+    }
+}
+
+/* Dot */
+.flikering-dot {
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-accent);
+    border-radius: 50%;
+    animation: flicker 1.5s infinite;
+}
+
+/* Animation */
+@keyframes flicker {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: scale(1.2);
+    }
+}

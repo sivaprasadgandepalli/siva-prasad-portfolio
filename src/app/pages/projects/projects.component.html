@@ -1,0 +1,95 @@
+<div class="container padding-inline projects">
+
+    <!-- HEADER -->
+    <app-quote text="Project ShowCase" [showDot]="true" weight="bolder" data-aos="fade-down" data-aos-delay="100">
+    </app-quote>
+
+    <div class="projects-intro">
+
+        <div class="section-heading">
+            <h1 data-aos="fade-up" data-aos-delay="200">
+                Quality-Driven <span>Software Engineering</span>
+            </h1>
+
+            <p data-aos="fade-up" data-aos-delay="300">
+                Demonstrating core competencies in Full-Stack architecture, API design, and responsive interface
+                development. Quality-focused implementations of real-world patterns.
+            </p>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs-container" data-aos="fade-up" data-aos-delay="400">
+            <button *ngFor="let tab of projectTabs" class="tab" [class.active]="activeTab === tab"
+                (click)="filterProjects(tab)">
+                {{ tab }}
+            </button>
+        </div>
+
+    </div>
+
+    <!-- PROJECT GRID -->
+    <div class="projects-grid">
+
+        <div class="project-card" *ngFor="let project of filteredProjects; let i = index" data-aos="fade-up"
+            [attr.data-aos-delay]="i * 100">
+
+            <!-- IMAGE -->
+            <div class="card-media">
+                <img [src]="project.image" alt="project" />
+
+                <span class="card-label">
+                    {{ project.type }}
+                </span>
+
+                <div class="card-actions">
+                    <a [href]="project.github" target="_blank">GitHub</a>
+                    <a [href]="project.live" target="_blank">Live Demo</a>
+                </div>
+            </div>
+
+            <!-- CONTENT -->
+            <div class="card-content">
+                <h3 class="card-title">{{ project.title }}</h3>
+
+                <p class="card-desc">
+                    {{ project.description }}
+                </p>
+            </div>
+
+            <!-- FEATURES -->
+            <ul class="card-features">
+                <li *ngFor="let feature of project.features">
+                    {{ feature }}
+                </li>
+            </ul>
+
+            <!-- TECH STACK -->
+            <div class="card-stack">
+                <span *ngFor="let tech of project.stack">
+                    {{ tech }}
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CTA BANNER -->
+    <div class="banner" data-aos="zoom-in" data-aos-delay="200">
+
+        <div class="content">
+            <h3>Let's build something exceptional.</h3>
+            <p>
+                I'm currently looking for new opportunities to apply my full-stack expertise.
+                Whether it's a new feature or a fresh project, I'm ready to ship.
+            </p>
+        </div>
+
+        <div class="actions">
+            <button>Start a Conversion</button>
+            <button>View GitHub</button>
+        </div>
+
+    </div>
+
+</div>

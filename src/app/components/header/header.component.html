@@ -1,0 +1,37 @@
+<header class="header glass padding-inline" [class.scrolled]="isScrolled">
+    <div class="header-container">
+
+        <!-- Brand / Name -->
+        <div class="brand">
+            <mat-icon class="icon">code</mat-icon>
+            Siva<span>Dev</span>
+        </div>
+
+        <!-- Desktop Nav -->
+        <nav class="nav desktop">
+            <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+            <a routerLink="/about" routerLinkActive="active-link">About</a>
+            <a routerLink="/experience" routerLinkActive="active-link">Experience</a>
+            <a routerLink="/projects" routerLinkActive="active-link">Projects</a>
+            <a routerLink="/contact" routerLinkActive="active-link">Contact</a>
+            <button class="btn btn-primary hire-btn">Hire Me</button>
+        </nav>
+
+        <!-- Hamburger for Mobile -->
+        <button class="hamburger mobile" (click)="toggleMenu()">
+            <mat-icon>{{ isMenuOpen() ? 'close' : 'menu' }}</mat-icon>
+        </button>
+
+    </div>
+
+    <!-- Mobile Menu Panel -->
+    <nav class="nav mobile-panel" [class.open]="isMenuOpen()">
+        <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }"
+            (click)="toggleMenu()">Home</a>
+        <a routerLink="/about" routerLinkActive="active-link" (click)="toggleMenu()">About</a>
+        <a routerLink="/experience" routerLinkActive="active-link">Experience</a>
+        <a routerLink="/projects" routerLinkActive="active-link" (click)="toggleMenu()">Projects</a>
+        <a routerLink="/contact" routerLinkActive="active-link" (click)="toggleMenu()">Contact</a>
+        <button class="btn btn-primary hire-btn" (click)="toggleMenu()">Hire Me</button>
+    </nav>
+</header>

@@ -1,1 +1,251 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --color-primary: #c0c1ff;
+  --color-primary-container: #8083ff;
+  --color-secondary: #c3c0ff;
+
+  --color-background: #0b1326;
+  --color-surface: #0b1326;
+
+  --surface-container-lowest: #060e20;
+  --surface-container-low: #131b2e;
+  --surface-container: #1a2236;
+  --surface-container-high: #222a3d;
+  --surface-container-highest: #2d3449;
+
+  --color-on-surface: #dae2fd;
+  --color-accent: #6366f1;
+
+  --color-error: #ffb4ab;
+
+  --font-primary: 'Inter', sans-serif;
+  --font-display: 'Inter', sans-serif;
+  --font-code: 'JetBrains Mono', monospace;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 2rem;
+
+  --shadow-ambient: 0 20px 60px rgba(218, 226, 253, 0.06);
+
+  /* Glass */
+  --glass-bg: rgba(26, 34, 54, 0.6);
+  --glass-blur: blur(12px);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--surface-container-lowest);
+  color: var(--color-on-surface);
+  font-family: var(--font-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+// AOS
+/* --- AOS overrides (keep at bottom) --- */
+[data-aos] {
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+.container {
+  min-height: calc(100dvh - 160px);
+  width: 100%;
+}
+
+.display-lg {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.headline-md {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.title-lg {
+  font-size: 1.375rem;
+  font-weight: 500;
+}
+
+.body-md {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.code {
+  font-family: var(--font-code);
+  font-size: 0.75rem;
+}
+
+.section {
+  padding: var(--space-xl) 0;
+}
+
+/* Whitespace dividers */
+.space-lg {
+  margin-top: var(--space-lg);
+}
+
+.space-xl {
+  margin-top: var(--space-xl);
+}
+
+.surface {
+  background: var(--color-surface);
+}
+
+.surface-low {
+  background: var(--surface-container-low);
+}
+
+.surface-high {
+  background: var(--surface-container-high);
+}
+
+.surface-highest {
+  background: var(--surface-container-highest);
+}
+
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border-radius: var(--radius-lg);
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg,
+      rgba(192, 193, 255, 0.15),
+      rgba(128, 131, 255, 0.15));
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-pill);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: none;
+}
+
+/* Primary Button */
+.btn-primary {
+  background: var(--color-primary);
+  color: #0b1326;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-ambient);
+}
+
+/* Ghost Button */
+.btn-ghost {
+  background: transparent;
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.btn-ghost:hover {
+  text-decoration-thickness: 2px;
+}
+
+
+.bento-card {
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  background: var(--surface-container-high);
+  transition: all 0.3s ease;
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-ambient);
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--surface-container-high);
+  border: none;
+  border-radius: var(--radius-md);
+  color: var(--color-on-surface);
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(192, 193, 255, 0.2);
+}
+
+/* Error state */
+.input.error {
+  background: rgba(255, 180, 171, 0.05);
+}
+
+.dock {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+
+  background: rgba(26, 34, 54, 0.8);
+  backdrop-filter: blur(20px);
+
+  box-shadow: var(--shadow-ambient);
+
+  display: flex;
+  gap: 1.5rem;
+}
+
+.ghost-border {
+  outline: 1px solid rgba(70, 69, 84, 0.15);
+}
+
+.noise {
+  position: relative;
+}
+
+.noise::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("https://www.transparenttextures.com/patterns/noise.png");
+  opacity: 0.02;
+  pointer-events: none;
+}
+
+.padding-inline {
+  padding-inline: 3rem;
+
+  @media (max-width: 768px) {
+    padding-inline: 1rem;
+  }
+}

@@ -1,0 +1,88 @@
+<section class="contact padding-inline">
+
+    <!-- LEFT SIDE -->
+    <div class="contact-left">
+
+        <app-quote text="Let's build something great" weight="bold" data-aos="fade-right" data-aos-delay="100">
+        </app-quote>
+
+        <h1 data-aos="fade-up" data-aos-delay="200">
+            Got a <span>Project?</span>
+        </h1>
+
+        <p data-aos="fade-up" data-aos-delay="300">
+            Whether you're starting something new or scaling an existing product,
+            I'm always open to discussing ideas and solving real-world problems.
+        </p>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+
+            <div class="info-item" *ngFor="let item of [1,2,3]; let i = index" data-aos="fade-right"
+                [attr.data-aos-delay]="400 + (i * 100)">
+
+                <!-- KEEP your existing content inside -->
+                <ng-container [ngSwitch]="i">
+
+                    <ng-container *ngSwitchCase="0">
+                        <mat-icon>call</mat-icon>
+                        <div>
+                            <span>Call Me</span>
+                            <p>+91 9392471528</p>
+                        </div>
+                    </ng-container>
+
+                    <ng-container *ngSwitchCase="1">
+                        <mat-icon>mail</mat-icon>
+                        <div>
+                            <span>Email</span>
+                            <p>sivaprasadgandepalli&#64;gmail.com</p>
+                        </div>
+                    </ng-container>
+
+                    <ng-container *ngSwitchCase="2">
+                        <mat-icon>location_on</mat-icon>
+                        <div>
+                            <span>Location</span>
+                            <p>Andhra Pradesh, India</p>
+                        </div>
+                    </ng-container>
+
+                </ng-container>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="contact-right">
+
+        <form class="contact-card" data-aos="fade-left" data-aos-delay="200">
+
+            <h3 data-aos="fade-up" data-aos-delay="300">Get in Touch</h3>
+
+            <div class="form-row">
+                <input type="text" placeholder="Your Name" data-aos="fade-up" data-aos-delay="350" />
+
+                <input type="email" placeholder="Email Address" data-aos="fade-up" data-aos-delay="400" />
+            </div>
+
+            <input type="text" placeholder="Subject" data-aos="fade-up" data-aos-delay="450" />
+
+            <textarea rows="5" placeholder="Your Message" data-aos="fade-up" data-aos-delay="500"></textarea>
+
+            <button class="btn btn-primary" data-aos="fade-up" data-aos-delay="550">
+                Send Message
+                <mat-icon>arrow_forward</mat-icon>
+            </button>
+
+            <p class="privacy-note" data-aos="fade-right" data-aos-delay="500">
+                By clicking "Send Message", you agree to our privacy policy and terms of service.
+            </p>
+
+        </form>
+
+    </div>
+
+</section>

@@ -1,0 +1,162 @@
+<div class="container experience padding-inline">
+
+    <!-- Quote -->
+    <app-quote text="My Work Experience" [showDot]="true" weight="bolder" data-aos="fade-down" data-aos-delay="100">
+    </app-quote>
+
+    <!-- Intro -->
+    <div class="experience-intro" data-aos="fade-up" data-aos-delay="200">
+        <h1>Learning & <span>Impact</span></h1>
+        <p>
+            Focusing on continuous growth and delivering tangible value through modern collaborative workflows and
+            technical excellence.
+        </p>
+    </div>
+
+    <div class="two-col-grid">
+
+        <!-- LEFT -->
+        <div class="role-section">
+
+            <h3 class="section-title" data-aos="fade-right">
+                <mat-icon>rocket_launch</mat-icon> Current Role
+            </h3>
+
+            <!-- Role Card -->
+            <div class="role-card" data-aos="fade-right" data-aos-delay="100">
+
+                <!-- Header -->
+                <div class="role-header" data-aos="fade-up" data-aos-delay="150">
+                    <div class="role-header-image-content">
+                        <div class="company-image">
+                            <img
+                                src="https://media.licdn.com/dms/image/v2/D560BAQFjzDZ63Oosuw/company-logo_200_200/company-logo_200_200/0/1701760686476/bridgesoft_com_logo?e=2147483647&v=beta&t=EmGoT0ntPLTGvNSp9rQmKw1lbB_ReT8ZTbW_C2bibdo" />
+                        </div>
+                        <div class="role-info">
+                            <h4>Associate Consultant</h4>
+                            <div class="company-info">
+                                <span>Bridgesoft Solutions</span>
+                                <span class="dot"></span>
+                                <span>May 2026</span>
+                                <span class="dot"></span>
+                                <span>Present</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="role-techstack">
+                        <span *ngFor="let tech of ['Jira','IAM','Identity Now','Okta']; let i = index"
+                            data-aos="zoom-in" [attr.data-aos-delay]="200 + (i * 50)">
+                            {{tech}}
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Contributions -->
+                <div class="role-contributions" data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="title">
+                        <mat-icon>fact_check</mat-icon> Impactful Contributions
+                    </h4>
+
+                    <div class="contribution-list">
+                        <div class="contribution-item" *ngFor="let item of constributions; let i = index"
+                            data-aos="zoom-in" [attr.data-aos-delay]="250 + (i * 50)">
+                            <p>{{ item }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Learnings -->
+                <div class="key-learnings" data-aos="fade-up" data-aos-delay="300">
+                    <h4 class="title">
+                        <mat-icon>auto_stories</mat-icon> Key Learnings
+                    </h4>
+
+                    <div class="key-learnings-list">
+                        <div class="key-learning-item" *ngFor="let item of keyLearnings; let i = index"
+                            data-aos="fade-up" [attr.data-aos-delay]="350 + (i * 50)">
+                            <mat-icon>{{item.icon}}</mat-icon>
+                            <span>{{item.name}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Internships & Education -->
+            <div class="internships_trainings internships">
+
+                <h4 class="internships_section_title" data-aos="fade-up" data-aos-delay="100">
+                    <mat-icon>history_edu</mat-icon> Internships & Education
+                </h4>
+
+                <div class="internship-list">
+                    <div class="internship-card" *ngFor="let item of internships_education; let i = index"
+                        data-aos="fade-up" [attr.data-aos-delay]="150 + (i * 100)">
+
+                        <div class="left">
+                            <div class="icon">
+                                <ng-container *ngIf="item.imageUrl; else iconFallback">
+                                    <img [src]="item.imageUrl" alt="logo" />
+                                </ng-container>
+
+                                <ng-template #iconFallback>
+                                    <mat-icon>{{item.icon}}</mat-icon>
+                                </ng-template>
+                            </div>
+
+                            <div class="content">
+                                <h3>{{item.title}}</h3>
+                                <p class="sub">
+                                    {{item.instituteName}} • {{item.period}}
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="right">
+                            <span *ngIf="item.grade">{{item.grade}}</span>
+                            <span *ngIf="item.contribution">{{item.contribution}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="skill-section">
+
+            <h3 class="section-title" data-aos="fade-left">
+                <mat-icon>grid_view</mat-icon> Skill Matrix
+            </h3>
+
+            <div class="skill-grid">
+                <div class="skill-item" *ngFor="let skill of skillSet; let i = index" data-aos="fade-up"
+                    [attr.data-aos-delay]="i * 50">
+                    <mat-icon>{{skill.icon}}</mat-icon>
+                    {{skill.name}}
+                </div>
+            </div>
+
+            <!-- Workflow Tools -->
+            <div class="workflow-tools" data-aos="fade-left" data-aos-delay="100">
+
+                <h3 class="section-title">
+                    <mat-icon>diversity_3</mat-icon> Workflow Tools
+                </h3>
+
+                <div class="workflow-tools-list">
+                    <div class="workflow-tool-item" *ngFor="let tool of workflowTools; let i = index"
+                        data-aos="fade-left" [attr.data-aos-delay]="150 + (i * 80)">
+                        <div class="tool-icon">
+                            <mat-icon>{{tool.icon}}</mat-icon>
+                        </div>
+                        <div class="content">
+                            <h4>{{tool.title}}</h4>
+                            <span>{{tool.subTitle}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

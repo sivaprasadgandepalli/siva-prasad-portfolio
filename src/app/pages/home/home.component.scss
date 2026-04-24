@@ -1,0 +1,294 @@
+.hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+    padding-block: 4rem;
+    color: white;
+    width: 90%;
+    margin: auto;
+}
+
+.hero-content {
+    padding-right: 1.5rem;
+}
+
+.hero-content h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    line-height: 4rem;
+}
+
+
+
+.hero-content h2 {
+    font-size: clamp(1.2rem, 3vw, 1.9rem);
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: var(--color-primary-container);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    padding-right: 1rem;
+    color: var(--color-on-surface);
+
+    @media (max-width: 425px) {
+        font-size: 0.850rem;
+    }
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-wrap: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    @media (max-width: 320px) {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-accent);
+}
+
+.btn-secondary {
+    border: 2px solid var(--color-accent);
+    color: var(--color-accent);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+.hero-image {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end
+}
+
+.hero-image img {
+    width: 500px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+}
+
+.short-info {
+    position: absolute;
+    bottom: -10px;
+    left: 24px;
+    width: max-content;
+
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+
+    background: var(--surface-container-high);
+    color: var(--color-primary);
+    // backdrop-filter: var(--glass-blur);
+
+    & h4 {
+        color: var(--color-on-surface);
+        font-weight: 700;
+    }
+
+    & span {
+        font-size: 0.750rem;
+    }
+}
+
+/* Container */
+.scroll-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block: 3rem;
+    font-size: 0.9rem;
+    color: var(--color-on-surface);
+
+}
+
+/* Mouse outline */
+.mouse {
+    width: 30px;
+    height: 50px;
+    border: 2px solid var(--color-on-surface);
+    border-radius: 20px;
+    position: relative;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 5px;
+}
+
+/* Animated dot */
+.mouse-dot {
+    width: 6px;
+    height: 10px;
+    background-color: var(--color-accent);
+    border-radius: 40%;
+    animation: scrollDot 1.8s infinite;
+}
+
+.infinite-scroller-section {
+    margin-block: 2rem 0;
+    text-align: center;
+    background-color: var(--color-background);
+    padding: 5rem 1rem;
+}
+
+
+/* Animation: dot moves up and down */
+@keyframes scrollDot {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+}
+
+/* Quote container */
+.quote {
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+    font-weight: 500;
+    width: fit-content;
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    padding: 0.3rem 0.9rem;
+    border-radius: var(--radius-pill);
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+/* Flickering dot */
+.flikering-dot {
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-accent);
+    border-radius: 50%;
+    animation: flicker 1.5s infinite;
+}
+
+// animations
+/* smooth entry */
+.hero-content>* {
+    transition: all 0.4s ease;
+}
+
+
+/* scroll indicator animation */
+.mouse-dot {
+    animation: scrollMove 1.5s infinite;
+}
+
+@keyframes scrollMove {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+}
+
+/* Flicker animation */
+@keyframes flicker {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: scale(1.2);
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding-block: 1rem;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        // grid-template-columns: 1fr;
+        padding-block: 1rem;
+        width: 100%;
+    }
+
+    .hero-image {
+        position: relative;
+        order: -1;
+        justify-self: center;
+        margin-top: 1.5rem;
+
+        & img {
+            width: 100%;
+        }
+    }
+
+    .short-info {
+        position: absolute;
+        bottom: 8px;
+        left: 0;
+        right: 10px;
+    }
+
+    .hero-image {
+        justify-self: center;
+    }
+
+    .hero-content {
+        padding-right: unset;
+    }
+
+    .hero-content h1 {
+        line-height: 2.5rem;
+    }
+
+    .hero-content p {
+        padding-right: unset;
+    }
+}

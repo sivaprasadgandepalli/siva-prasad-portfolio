@@ -1,0 +1,104 @@
+<section class="about padding-inline">
+
+    <!-- HERO -->
+    <div class="about-hero">
+
+        <!-- Image (right → enters from right) -->
+        <div class="about-right" data-aos="fade-left" data-aos-delay="200">
+            <img src="assets/images/profile.png" alt="profile" />
+        </div>
+
+        <!-- Content -->
+        <div class="about-left">
+
+            <app-quote text="Get to know me" weight="bold" data-aos="fade-right" data-aos-delay="100">
+            </app-quote>
+
+            <h1 data-aos="fade-up" data-aos-delay="200">
+                Hey, I'm <span>Siva Prasad</span>
+            </h1>
+
+            <p data-aos="fade-up" data-aos-delay="300">
+                I started my journey as a curious developer who loved solving problems.
+                Over time, I’ve worked on full-stack applications, focusing on performance,
+                scalability, and clean architecture.
+            </p>
+
+            <p data-aos="fade-up" data-aos-delay="400">
+                Currently, I’m working at Bridgesoft Solutions where I contribute
+                to building enterprise-level applications while continuously improving my skills.
+            </p>
+
+            <!-- Stats (staggered) -->
+            <div class="stats">
+                <div class="stat" *ngFor="let stat of [1,2,3]; let i = index" data-aos="zoom-in"
+                    [attr.data-aos-delay]="500 + (i * 100)">
+
+                    <ng-container [ngSwitch]="i">
+                        <ng-container *ngSwitchCase="0">
+                            <h3>1+</h3>
+                            <span>Years Experience</span>
+                        </ng-container>
+
+                        <ng-container *ngSwitchCase="1">
+                            <h3>10+</h3>
+                            <span>Projects Built</span>
+                        </ng-container>
+
+                        <ng-container *ngSwitchCase="2">
+                            <h3>100%</h3>
+                            <span>Commitment</span>
+                        </ng-container>
+                    </ng-container>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- TIMELINE -->
+    <div class="timeline-section">
+
+        <h2 data-aos="fade-up">My Journey</h2>
+
+        <div class="timeline-wrapper" data-aos="fade-up" data-aos-delay="100">
+            <app-timeline [items]="timelineData"></app-timeline>
+        </div>
+
+    </div>
+
+    <!-- BEYOND -->
+    <div class="beyond">
+
+        <h2 data-aos="fade-up">Beyond Coding</h2>
+
+        <p data-aos="fade-up" data-aos-delay="100">
+            Outside of development, I enjoy exploring new technologies, improving my
+            problem-solving skills, and staying consistent with learning. I also like
+            spending time on activities that help me stay focused and balanced.
+        </p>
+
+        <div class="hobbies">
+            <div class="hobby"
+                *ngFor="let hobby of ['💻 Exploring new tech','📚 Continuous learning','🎯 Problem solving','🎵 Music']; let i = index"
+                data-aos="fade-right" [attr.data-aos-delay]="200 + (i * 100)">
+                {{hobby}}
+            </div>
+        </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="about-cta" data-aos="zoom-in" data-aos-delay="100">
+
+        <h2>Let’s build something impactful</h2>
+
+        <a routerLink="/contact" class="btn btn-primary">
+            Contact Me
+        </a>
+
+    </div>
+
+</section>

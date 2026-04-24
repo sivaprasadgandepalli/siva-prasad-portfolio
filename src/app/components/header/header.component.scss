@@ -1,0 +1,167 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    padding-block: 1.2rem;
+    background: transparent;
+    backdrop-filter: blur(0px);
+    border-bottom: 1px solid var(--surface-container-highest);
+    transition: all 0.3s ease;
+    border-radius: 0%;
+}
+
+.header.scrolled {
+    background: rgba(11, 19, 38, 0.6);
+    /* matches your dark theme */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Flex Layout */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Brand */
+.brand {
+    display: flex;
+    align-items: center;
+    /* vertically centers icon & text */
+    font-weight: 600;
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+
+    & span {
+        color: var(--color-accent);
+    }
+
+    .icon {
+        background-color: var(--color-accent);
+        color: white;
+        font-size: 2rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: var(--radius-sm);
+        margin-right: 0.5rem;
+    }
+}
+
+/* Nav */
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Links */
+.nav a {
+    text-decoration: none;
+    color: var(--color-on-surface);
+    font-size: 0.9rem;
+    opacity: 0.7;
+    transition: all 0.2s ease;
+}
+
+.nav a:hover,
+.nav .active-link {
+    opacity: 1;
+    cursor: pointer;
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+
+.hire-btn {
+    margin-left: 1rem;
+    background-color: var(--color-accent);
+    color: azure;
+    font-weight: 600;
+}
+
+.active-link {
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+/* Hamburger Button */
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--color-on-surface);
+    cursor: pointer;
+    z-index: 1100;
+    /* above mobile panel */
+    transition: transform 0.3s ease;
+}
+
+/* Mobile Panel */
+.mobile-panel {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    /* hide offscreen initially */
+    width: 100%;
+    height: 100vh;
+    background: rgba(26, 34, 54, 0.95);
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 4.8rem 1rem 3rem;
+    gap: 1.2rem;
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.mobile-panel.open {
+    left: 0;
+}
+
+/* Mobile links */
+.mobile-panel a {
+    text-decoration: none;
+    color: var(--color-on-surface);
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0.85;
+    transition: all 0.2s ease;
+
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        padding-block: 0.850rem;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 2rem;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .hire-btn {
+        margin-left: 0%;
+        border-radius: var(--radius-sm);
+    }
+
+    .mobile-panel {
+        display: flex;
+    }
+}

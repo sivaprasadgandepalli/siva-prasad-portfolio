@@ -1,0 +1,47 @@
+<div class="timeline">
+    <div class="timeline-item" *ngFor="let item of items; let i = index" [class.reverse]="i % 2 !== 0">
+
+        <ng-container *ngIf="!isMobile; else mobileView">
+
+            <!-- LEFT CARD -->
+            <div class="card left-card">
+                <ng-container *ngIf="i % 2 === 0; else altLeft">
+                    <p class="desc show-bg">{{ item.description }}</p>
+                </ng-container> <ng-template #altLeft> <span class="period">{{ item.period }}</span>
+                    <h4>{{ item.title }}</h4>
+                    <p class="subtitle" *ngIf="item.subtitle"> {{ item.subtitle }} </p>
+                </ng-template>
+            </div> <!-- CENTER ICON -->
+            <div class="icon">
+                <mat-icon>{{getIcon(item.type)}}</mat-icon>
+            </div> <!-- RIGHT CARD -->
+            <div class="card right-card">
+                <ng-container *ngIf="i % 2 === 0; else altRight">
+                    <span class="period">{{
+                        item.period }}</span>
+                    <h4>{{ item.title }}</h4>
+                    <p class="subtitle" *ngIf="item.subtitle"> {{ item.subtitle }} </p>
+                </ng-container> <ng-template #altRight>
+                    <p class="desc show-bg">{{ item.description }}</p>
+                </ng-template>
+            </div>
+        </ng-container>
+
+        <!-- MOBILE VIEW -->
+        <ng-template #mobileView>
+            <div class="icon">
+                <mat-icon>{{ getIcon(item.type) }}</mat-icon>
+            </div>
+
+            <div class="card mobile-card show-bg">
+                <span class="period">{{ item.period }}</span>
+                <h4>{{ item.title }}</h4>
+                <p class="subtitle" *ngIf="item.subtitle">
+                    {{ item.subtitle }}
+                </p>
+                <p class="desc">{{ item.description }}</p>
+            </div>
+        </ng-template>
+
+    </div>
+</div>
