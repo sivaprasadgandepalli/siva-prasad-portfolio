@@ -38,12 +38,19 @@
                 <img [src]="project.image" alt="project" />
 
                 <span class="card-label">
+                    <mat-icon>{{project.icon}}</mat-icon>
                     {{ project.type }}
                 </span>
 
                 <div class="card-actions">
-                    <a [href]="project.github" target="_blank">GitHub</a>
-                    <a [href]="project.live" target="_blank">Live Demo</a>
+                    <a [href]="project.github" target="_blank" class="primary">
+                        <mat-icon>code</mat-icon>
+                        View Code
+                    </a>
+                    <a [href]="project.live" target="_blank" class="secondary">
+                        <mat-icon>rocket</mat-icon>
+                        Live Demo
+                    </a>
                 </div>
             </div>
 

@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { QuoteComponent } from '../../shared/quote/quote.component';
 import { CommonModule } from '@angular/common';
 import AOS from 'aos';
+import { MatIconModule } from '@angular/material/icon';
 @Component({
   selector: 'app-projects',
-  imports: [QuoteComponent, CommonModule],
+  imports: [QuoteComponent, CommonModule, MatIconModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
@@ -18,6 +19,7 @@ export class ProjectsComponent implements OnInit {
     {
       title: 'E-Commerce Dashboard',
       type: 'FullStack',
+      icon: "layers",
       description: 'Admin dashboard to manage products, orders, and analytics.',
       features: [
         'Role-based authentication',
@@ -32,6 +34,7 @@ export class ProjectsComponent implements OnInit {
     {
       title: 'Weather Insights App',
       type: 'APIIntegration',
+      icon: "api",
       description: 'Displays real-time weather data with location-based insights.',
       features: [
         'Geo-location detection',
@@ -46,6 +49,7 @@ export class ProjectsComponent implements OnInit {
     {
       title: 'Portfolio Website',
       type: 'Frontend',
+      icon: "web",
       description: 'Responsive personal portfolio showcasing projects and skills.',
       features: [
         'Responsive design',
@@ -60,6 +64,7 @@ export class ProjectsComponent implements OnInit {
     {
       title: 'Task Management System',
       type: 'FullStack',
+      icon: "layers",
       description: 'Kanban-style task manager with team collaboration.',
       features: [
         'Drag and drop tasks',
@@ -75,6 +80,7 @@ export class ProjectsComponent implements OnInit {
     {
       title: 'Chat Application',
       type: 'FullStack',
+      icon: "layers",
       description: 'Real-time chat app with private and group messaging.',
       features: [
         'WebSocket-based messaging',
@@ -89,6 +95,7 @@ export class ProjectsComponent implements OnInit {
     {
       title: 'Finance Tracker',
       type: 'Frontend',
+      icon: "web",
       description: 'Personal expense tracker with visual analytics.',
       features: [
         'Interactive charts',
@@ -103,6 +110,7 @@ export class ProjectsComponent implements OnInit {
     {
       title: 'Authentication System',
       type: 'FullStack',
+      icon: "layers",
       description: 'Secure authentication system with JWT and role management.',
       features: [
         'JWT-based auth',
@@ -118,6 +126,7 @@ export class ProjectsComponent implements OnInit {
     {
       title: 'Stock Price Dashboard',
       type: 'APIIntegration',
+      icon: "api",
       description: 'Real-time stock tracking dashboard with charts.',
       features: [
         'Live API data',

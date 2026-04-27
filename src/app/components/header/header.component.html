@@ -29,7 +29,7 @@
         <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }"
             (click)="toggleMenu()">Home</a>
         <a routerLink="/about" routerLinkActive="active-link" (click)="toggleMenu()">About</a>
-        <a routerLink="/experience" routerLinkActive="active-link">Experience</a>
+        <a routerLink="/experience" routerLinkActive="active-link" (click)="toggleMenu()">Experience</a>
         <a routerLink="/projects" routerLinkActive="active-link" (click)="toggleMenu()">Projects</a>
         <a routerLink="/contact" routerLinkActive="active-link" (click)="toggleMenu()">Contact</a>
         <button class="btn btn-primary hire-btn" (click)="toggleMenu()">Hire Me</button>
