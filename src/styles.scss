@@ -56,10 +56,9 @@ body {
 }
 
 
-// body,
-// html {
-//   overflow-x: hidden;
-// }
+router-outlet + * {
+    flex: 1;
+}
 
 // AOS
 /* --- AOS overrides (keep at bottom) --- */

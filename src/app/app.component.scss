@@ -1,7 +1,5 @@
 .app-layout {
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
-
-    overflow-x: hidden;   /* ✅ safe here, NOT on body */
+    padding-top:80px;
+    overflow-x: hidden; 
 }
