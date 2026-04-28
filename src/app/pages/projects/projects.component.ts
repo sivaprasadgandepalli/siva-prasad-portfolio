@@ -17,20 +17,21 @@ export class ProjectsComponent implements OnInit {
   filteredProjects: any[] = [];
   projectsList = [
     {
-      title: 'E-Commerce Dashboard',
+      title: 'Employee Management System',
       type: 'FullStack',
       icon: "layers",
-      description: 'Admin dashboard to manage products, orders, and analytics.',
+      description: 'A comprehensive Java-based application designed to streamline employee management with secure authentication, role-based access control, and intuitive dashboards. Built with Jsp for the frontend, SpingBoot and Hibernate for the backend, and MySql for persistent data storage.',
       features: [
-        'Role-based authentication',
-        'Real-time order tracking',
-        'Sales analytics charts'
+        'Role-based authentication and authorization',
+        'Employee record management',
+        'Impressive Dashboards'
       ],
-      stack: ['Angular', 'Node.js', 'MongoDB'],
-      image: 'https://media.istockphoto.com/id/1449490038/photo/online-shopping-and-e-commerce-technology-concept-shopper-using-computer-laptop-to-input.webp?a=1&b=1&s=612x612&w=0&k=20&c=UV8-hsrRpcoh3lhM-bqJixmZW6Fskg88aBjp-b151Mc=',
-      github: 'https://github.com/yourrepo/ecommerce',
-      live: 'https://your-ecommerce-demo.com'
-    },
+      stack: ["React", "Node.js", "Express.js", "MongoDB", "JWT"],
+      image: 'https://blog.thedigitalgroup.com/assets/uploads/Unravel_the_Top_Challenges_and_Solutions_Employee_Management_System.png',
+      github: 'https://github.com/sivaprasadgandepalli/Mern-Authentication-System',
+      live: ''
+    }
+    ,
     {
       title: 'Weather Insights App',
       type: 'APIIntegration',
@@ -43,8 +44,8 @@ export class ProjectsComponent implements OnInit {
       ],
       stack: ['Angular', 'OpenWeather API'],
       image: 'https://t4.ftcdn.net/jpg/06/30/19/93/240_F_630199356_SUwsv5QCV2lgbEjkKPzl7YA7mYK8YpZi.jpg',
-      github: 'https://github.com/yourrepo/weather',
-      live: 'https://your-weather-demo.com'
+      github: 'https://github.com/sivaprasadgandepalli/Forecastify',
+      live: ''
     },
     {
       title: 'Portfolio Website',
@@ -58,23 +59,24 @@ export class ProjectsComponent implements OnInit {
       ],
       stack: ['HTML', 'CSS', 'Angular'],
       image: 'https://t3.ftcdn.net/jpg/16/01/78/16/240_F_1601781607_W6QX0G2F9fKrf8HJiS0VzyYzSS4EvqR4.jpg',
-      github: 'https://github.com/yourrepo/portfolio',
-      live: 'https://your-portfolio.com'
+      github: 'https://github.com/sivaprasadgandepalli/siva-prasad-portfolio',
+      live: 'https://siva-prasad-portfolio-five.vercel.app/'
     },
     {
-      title: 'Task Management System',
-      type: 'FullStack',
+      title: 'Photosnap Multi-Page Website',
+      type: 'Frontend',
       icon: "layers",
-      description: 'Kanban-style task manager with team collaboration.',
+      description: 'Responsive marketing site for a photo-sharing app built with CSS Grid.',
       features: [
-        'Drag and drop tasks',
-        'User authentication',
-        'Real-time updates'
+        'Multi-page responsive layout',
+        'Optimized for mobile, tablet, and desktop',
+        'Hover states for interactive elements',
+        'Professional design system integration'
       ],
-      stack: ['Angular', 'Firebase'],
-      image: 'https://t3.ftcdn.net/jpg/17/82/54/96/240_F_1782549612_lGf3biZwfqJ9llDHGENM4EWDAnp5bJd7.jpg',
-      github: 'https://github.com/yourrepo/task',
-      live: 'https://your-task-demo.com'
+      stack: ['HTML', 'CSS', 'JavaScript'],
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnlpGa2TlS6LoN7fv70J7H3lV_QTrqPXxQ5A&s',
+      github: 'https://github.com/sivaprasadgandepalli/Photosnap-website',
+      live: ''
     },
 
     {
@@ -89,24 +91,26 @@ export class ProjectsComponent implements OnInit {
       ],
       stack: ['Angular', 'Node.js', 'Socket.io'],
       image: 'https://t4.ftcdn.net/jpg/17/94/81/59/240_F_1794815965_epCn7qYP7to4dNeWOguHPCBCeACU3YnC.jpg',
-      github: 'https://github.com/yourrepo/chat',
+      github: '',
       live: 'https://your-chat-demo.com'
     },
     {
-      title: 'Finance Tracker',
-      type: 'Frontend',
-      icon: "web",
-      description: 'Personal expense tracker with visual analytics.',
+      title: 'Link-Sharing App',
+      type: 'Frontend / Full-Stack',
+      icon: "link",
+      description: 'A responsive app for developers to create, manage, and share personalized link collections.',
       features: [
-        'Interactive charts',
-        'Category-based filtering',
-        'Local storage persistence'
+        'Create, read, update, delete links',
+        'Drag and drop to reorder links',
+        'Responsive layouts for mobile, tablet, and desktop',
+        'Preview and copy profile link',
       ],
-      stack: ['Angular', 'Chart.js'],
-      image: 'https://t3.ftcdn.net/jpg/19/66/48/00/240_F_1966480078_x5wuXCcPTObT42vVrL6g6xWRytKonIkr.jpg',
-      github: 'https://github.com/yourrepo/finance',
-      live: 'https://your-finance-demo.com'
-    },
+      stack: ['HTML', 'CSS', 'JavaScript'],
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9aABk5dg-VNWvhBUsbSS2r5KHc1OeeM9rWnHI-WEEhA&s',
+      github: 'https://github.com/sivaprasadgandepalli/LinkSharePro-App',
+      live: ''
+    }
+    ,
     {
       title: 'Authentication System',
       type: 'FullStack',
@@ -117,10 +121,10 @@ export class ProjectsComponent implements OnInit {
         'Role-based access control',
         'Password hashing'
       ],
-      stack: ['Node.js', 'Express', 'MongoDB'],
+      stack: ['React', 'Node.js', 'Express', 'MongoDB', 'Jwt'],
       image: 'https://t3.ftcdn.net/jpg/18/48/06/36/240_F_1848063605_LCkCtL3vU6YmusmAKSDAPjTidkPleX1u.jpg',
-      github: 'https://github.com/yourrepo/auth',
-      live: 'https://your-auth-demo.com'
+      github: 'https://github.com/sivaprasadgandepalli/Mern-Authentication-System',
+      live: ''
     },
 
     {
@@ -135,8 +139,8 @@ export class ProjectsComponent implements OnInit {
       ],
       stack: ['Angular', 'Alpha Vantage API'],
       image: 'https://t4.ftcdn.net/jpg/07/04/01/05/240_F_704010559_VpolMnMC8MBH9uvKKlIljzSKqMNnGzgc.jpg',
-      github: 'https://github.com/yourrepo/stocks',
-      live: 'https://your-stocks-demo.com'
+      github: 'https://github.com/sivaprasadgandepalli/cryptoTracker',
+      live: ''
     }
 
   ];

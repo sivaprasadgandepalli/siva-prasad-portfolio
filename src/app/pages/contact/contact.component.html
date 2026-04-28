@@ -58,19 +58,19 @@
     <!-- RIGHT SIDE -->
     <div class="contact-right">
 
-        <form class="contact-card" data-aos="fade-left" data-aos-delay="200">
+        <form class="contact-card" data-aos="fade-left" data-aos-delay="200" (submit)="sendEmail($event)">
 
             <h3 data-aos="fade-up" data-aos-delay="300">Get in Touch</h3>
 
             <div class="form-row">
-                <input type="text" placeholder="Your Name" data-aos="fade-up" data-aos-delay="350" />
+                <input type="text" placeholder="Your Name" name="from_name" data-aos="fade-up" data-aos-delay="350" />
 
-                <input type="email" placeholder="Email Address" data-aos="fade-up" data-aos-delay="400" />
+                <input type="email" placeholder="Email Address" name="from_email" data-aos="fade-up" data-aos-delay="400" />
             </div>
 
-            <input type="text" placeholder="Subject" data-aos="fade-up" data-aos-delay="450" />
+            <input type="text" placeholder="Subject" name="subject" data-aos="fade-up" data-aos-delay="450" />
 
-            <textarea rows="5" placeholder="Your Message" data-aos="fade-up" data-aos-delay="500"></textarea>
+            <textarea rows="5" placeholder="Your Message" name="message" data-aos="fade-up" data-aos-delay="500"></textarea>
 
             <button class="btn btn-primary" data-aos="fade-up" data-aos-delay="550">
                 Send Message

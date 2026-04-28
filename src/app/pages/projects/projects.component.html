@@ -47,7 +47,7 @@
                         <mat-icon>code</mat-icon>
                         View Code
                     </a>
-                    <a [href]="project.live" target="_blank" class="secondary">
+                    <a [href]="project.live" target="_blank" class="secondary" *ngIf="project.live">
                         <mat-icon>rocket</mat-icon>
                         Live Demo
                     </a>
