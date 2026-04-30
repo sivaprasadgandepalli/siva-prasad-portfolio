@@ -37,6 +37,12 @@
   /* Glass */
   --glass-bg: rgba(26, 34, 54, 0.6);
   --glass-blur: blur(12px);
+
+  --glow-soft: 0 0 8px var(--color-accent);
+  --glow-strong: 0 0 18px var(--color-accent);
+
+  --corner-gap: 8px;
+  --corner-size: 60px;
 }
 
 *,
@@ -56,8 +62,8 @@ body {
 }
 
 
-router-outlet + * {
-    flex: 1;
+router-outlet+* {
+  flex: 1;
 }
 
 // AOS

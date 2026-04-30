@@ -26,7 +26,7 @@ export class ProjectsComponent implements OnInit {
         'Employee record management',
         'Impressive Dashboards'
       ],
-      stack: ["React", "Node.js", "Express.js", "MongoDB", "JWT"],
+      stack: ["React", "Node", "MongoDB", "JWT"],
       image: 'https://blog.thedigitalgroup.com/assets/uploads/Unravel_the_Top_Challenges_and_Solutions_Employee_Management_System.png',
       github: 'https://github.com/sivaprasadgandepalli/Mern-Authentication-System',
       live: ''
@@ -42,7 +42,7 @@ export class ProjectsComponent implements OnInit {
         'Weather API integration',
         'Dynamic UI updates'
       ],
-      stack: ['Angular', 'OpenWeather API'],
+      stack: ['React', 'Tailwind', 'OpenWeather API'],
       image: 'https://t4.ftcdn.net/jpg/06/30/19/93/240_F_630199356_SUwsv5QCV2lgbEjkKPzl7YA7mYK8YpZi.jpg',
       github: 'https://github.com/sivaprasadgandepalli/Forecastify',
       live: ''
@@ -65,7 +65,7 @@ export class ProjectsComponent implements OnInit {
     {
       title: 'Photosnap Multi-Page Website',
       type: 'Frontend',
-      icon: "layers",
+      icon: "web",
       description: 'Responsive marketing site for a photo-sharing app built with CSS Grid.',
       features: [
         'Multi-page responsive layout',
@@ -89,15 +89,15 @@ export class ProjectsComponent implements OnInit {
         'Online/offline status',
         'Typing indicators'
       ],
-      stack: ['Angular', 'Node.js', 'Socket.io'],
+      stack: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
       image: 'https://t4.ftcdn.net/jpg/17/94/81/59/240_F_1794815965_epCn7qYP7to4dNeWOguHPCBCeACU3YnC.jpg',
       github: '',
       live: 'https://your-chat-demo.com'
     },
     {
       title: 'Link-Sharing App',
-      type: 'Frontend / Full-Stack',
-      icon: "link",
+      type: 'Full-Stack',
+      icon: "layers",
       description: 'A responsive app for developers to create, manage, and share personalized link collections.',
       features: [
         'Create, read, update, delete links',
@@ -105,10 +105,10 @@ export class ProjectsComponent implements OnInit {
         'Responsive layouts for mobile, tablet, and desktop',
         'Preview and copy profile link',
       ],
-      stack: ['HTML', 'CSS', 'JavaScript'],
+      stack: ['React', 'Tailwind', 'Node', 'MongoDB'],
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9aABk5dg-VNWvhBUsbSS2r5KHc1OeeM9rWnHI-WEEhA&s',
       github: 'https://github.com/sivaprasadgandepalli/LinkSharePro-App',
-      live: ''
+      live: 'https://link-share-pro.vercel.app/'
     }
     ,
     {
@@ -141,7 +141,24 @@ export class ProjectsComponent implements OnInit {
       image: 'https://t4.ftcdn.net/jpg/07/04/01/05/240_F_704010559_VpolMnMC8MBH9uvKKlIljzSKqMNnGzgc.jpg',
       github: 'https://github.com/sivaprasadgandepalli/cryptoTracker',
       live: ''
+    },
+    {
+      title: 'Food Ordering Website',
+      type: 'Frontend',
+      icon: "web",
+      description: 'A responsive restaurant landing page showcasing featured dishes, menu categories, customer testimonials. Built to highlight modern UI/UX for food ordering and promotions.',
+      features: [
+        'Responsive multi-page layout',
+        'Interactive menu categories',
+        'Customer testimonials and ratings',
+        'Cart functionality with order summary',
+      ],
+      stack: ["HTML", "CSS", "JavaScript"],
+      image: 'https://restaurantly-delta.vercel.app/images/home.png',
+      github: 'https://github.com/sivaprasadgandepalli/Pesto',
+      live: 'https://restaurantly-delta.vercel.app/'
     }
+
 
   ];
 
